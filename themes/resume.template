@@ -152,7 +152,7 @@
       <h3 class= "label">{{basics.label}}</h3>
       <div class= "contact-header">
         {{#basics.location}}
-        {{basics.location.city}}, {{basics.location.region}}, {{basics.location.countryCode}}<br>
+        {{basics.location.city}}, {{basics.location.countryCode}}<br>
         {{basics.location.address}}
         {{/basics.location}}
       </div>
