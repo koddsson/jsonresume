@@ -158,7 +158,7 @@
       </div>
       <div id= "contact">
         <br>
-        {{#basics.email}}
+        {{#basics.email?}}
         <div class= "contact-header">
           EMAIL <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "mailto:{{basics.email}}" target= "_blank">{{basics.email}}</a> <span class= "responsive-show"><br><br></span>
         </div>
@@ -168,7 +168,7 @@
           PHONE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span>{{basics.phone}} <span class= "responsive-show"><br><br></span>
         </div>
         {{/phoneBool}}
-        {{#basics.website}}
+        {{#basics.website?}}
         <div class= "contact-header">
           WEBSITE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{basics.website}}" target= "_blank">{{basics.website}}</a> <span class= "responsive-show"><br><br></span>
         </div>
@@ -176,7 +176,7 @@
       </div>
       <br>
       <div id= "profiles">
-        {{#basics.profiles}}
+        {{#basics.profiles?}}
         <div class= "contact-header">PROFILES</div><br>
         <p class= "profile"><a href= "{{url}}" target= "_blank" class= "profile">{{network}}</a></p>
         {{/basics.profiles}}
