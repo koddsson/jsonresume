@@ -149,7 +149,7 @@
       <img src= "{{basics.picture}}" width= "75px" height= "75px" class= "picture">
       {{/pictureBool}}
       <h1>{{basics.name}}</h1>
-      <h3 class= "label">{{basics.capitalLabel}}</h3>
+      <h3 class= "label">{{basics.label}}</h3>
       <div class= "contact-header">
         {{#basics.location}}
         {{basics.location.city}}, {{basics.location.region}}, {{basics.location.countryCode}}<br>
