@@ -145,9 +145,9 @@
   </head>
   <body>
     <div class= "header">
-      {{#pictureBool}}
+      {{#basics.picture}}
       <img src= "{{basics.picture}}" width= "75px" height= "75px" class= "picture">
-      {{/pictureBool}}
+      {{/basics.picture}}
       <h1>{{basics.name}}</h1>
       <h3 class= "label">{{basics.label}}</h3>
       <div class= "contact-header">
@@ -163,11 +163,11 @@
           EMAIL <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "mailto:{{basics.email}}" target= "_blank">{{basics.email}}</a> <span class= "responsive-show"><br><br></span>
         </div>
         {{/basics.email}}
-        {{#phoneBool}}
+        {{#basics.phone}}
         <div class= "contact-header">
           PHONE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span>{{basics.phone}} <span class= "responsive-show"><br><br></span>
         </div>
-        {{/phoneBool}}
+        {{/basics.phone}}
         {{#basics.website}}
         <div class= "contact-header">
           WEBSITE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{basics.website}}" target= "_blank">{{basics.website}}</a> <span class= "responsive-show"><br><br></span>
@@ -185,15 +185,14 @@
       </div>		
     </div>
     <div class= "main">
-      {{#aboutBool}}
+      {{#basics.summary}}
       <div id= "about">
         <h2><i class= "fa fa-user left"></i> ABOUT</h2>
         <p>
           {{basics.summary}}
         </p>
       </div>
-      {{/aboutBool}}
-      {{#workBool}}
+      {{/basics.summary}}
       <div id= "work">
         <h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
         {{#work}}
@@ -212,8 +211,6 @@
         </div>
         {{/work}}
       </div>
-      {{/workBool}}
-      {{#volunteerBool}}
       <div id= "volunteer">
         <h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
         {{#volunteer}}
@@ -230,8 +227,6 @@
         {{/volunterHighlights}}
         {{/volunteer}}
       </div>
-      {{/volunteerBool}}
-      {{#skillsBool}}
       <div id= "skills">
         <h2><i class= "fa fa-tasks left"></i> SKILLS</h2>
         {{#skills}}
@@ -241,8 +236,6 @@
         {{/keywords}}
         {{/skills}}
       </div><br>
-      {{/skillsBool}}
-      {{#educationBool}}
       <div id= "education">
         <h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
         {{#education}}
@@ -259,8 +252,6 @@
         {{/educationCourses}}
         {{/education}}
       </div>
-      {{/educationBool}}
-      {{#awardsBool}}
       <div id= "awards">
         <h2><i class= "fa fa-trophy left"></i> AWARDS</h2>
         {{#awards}}
@@ -269,8 +260,6 @@
         <p>{{summary}}</p>
         {{/awards}}
       </div>
-      {{/awardsBool}}
-      {{#publicationsBool}}
       <div id= "publications">
         <h2><i class= "fa fa-book left"></i> PUBLICATIONS</h2>
         {{#publications}}
@@ -279,8 +268,6 @@
         <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
         {{/publications}}
       </div>
-      {{/publicationsBool}}
-      {{#interestsBool}}
       <div id= "interests">
         <h2><i class= "fa fa-star left"></i> INTERESTS</h2>
         {{#interests}}
@@ -290,8 +277,6 @@
         {{/keywords}}
         {{/interests}}
       </div>
-      {{/interestsBool}}
-      {{#languagesBool}}
       <div id= "languages">
         <h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
         {{#languages}}
@@ -299,8 +284,6 @@
         <h4>Fluency: {{fluency}}</h4>
         {{/languages}}
       </div>
-      {{/languagesBool}}
-      {{#referencesBool}}
       <div id= "references">
         <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
         {{#references}}
@@ -310,7 +293,6 @@
         </blockquote><br>
         {{/references}}
       </div>
-      {{/referencesBool}}
 
     </div>
   </body>
