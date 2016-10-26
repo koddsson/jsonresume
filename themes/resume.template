@@ -177,7 +177,9 @@
       <br>
       <div id= "profiles">
         {{#basics.profiles}}
-        {{network}} <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{url}}" target= "_blank">{{username}}</a> <span class= "responsive-show"><br><br></span>
+        <div class= "contact-header">
+          {{network}} <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{url}}" target= "_blank">{{username}}</a> <span class= "responsive-show"><br><br></span>
+        </div>
         {{/basics.profiles}}
       </div>
     </div>
