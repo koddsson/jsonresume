@@ -168,11 +168,11 @@
           PHONE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span>{{basics.phone}} <span class= "responsive-show"><br><br></span>
         </div>
         {{/phoneBool}}
-        {{#websiteBool}}
+        {{#basics.website}}
         <div class= "contact-header">
           WEBSITE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{basics.website}}" target= "_blank">{{basics.website}}</a> <span class= "responsive-show"><br><br></span>
         </div>
-        {{/websiteBool}}
+        {{/basics.website}}
       </div>
       <br>
       <div id= "profiles">
