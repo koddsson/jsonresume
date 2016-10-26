@@ -177,10 +177,9 @@
       <br>
       <div id= "profiles">
         {{#basics.profiles}}
-        <div class= "contact-header">PROFILES</div><br>
-        <p class= "profile"><a href= "{{url}}" target= "_blank" class= "profile">{{network}}</a></p>
+        {{network}} <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{url}}" target= "_blank">{{username}}</a> <span class= "responsive-show"><br><br></span>
         {{/basics.profiles}}
-      </div>		
+      </div>
     </div>
     <div class= "main">
       {{#aboutBool}}
