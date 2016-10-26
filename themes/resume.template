@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{basics.name}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-size: 62.5%;
+        font-family: Montserrat;
+        color: #333333;
+      }
+      .picture {
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      a {
+        color: #333333;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #4e4e4e;
+      }
+      a:hover {
+        color: #4e4e4e;
+        text-decoration: underline;
+      }
+
+      .header {
+        text-align:center;
+        font-size: 2em;
+        margin-top:1em;
+        margin-left:5%;
+        margin-right:5%;
+      }
+      h1 {
+        font-size:3em;
+        margin-bottom:0;
+      }
+      .profile {
+        font-family: Montserrat;
+        font-size: 1em;
+        margin:0;
+      }
+
+      .contact-header {
+        font-weight:bold;
+      }
+      .label {
+        margin-top: 0;
+        margin-bottom: 1em;
+      }
+      .fa {
+        font-size:2em;
+      }
+      .left {
+        font-size: 1em;
+      }
+      .main {
+        margin 0 auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 50px;
+      }
+      h2 {
+        font-size: 3.5em;
+      }
+      h3 {
+        font-size:2em;
+        margin-bottom:0;
+      }
+      h4 {
+        color: #4e4e4e;
+        font-size:1.5em;
+        margin-top:0;
+      }
+      .skills {
+        margin-bottom: 10px;
+      }
+      p {
+        font-family: 'Open Sans';
+        font-size: 1.5em;
+      }
+      li {
+        font-family: 'Open Sans';
+        font-size: 1.5em;
+      }
+      .keywords {
+        background-color: #333333;
+        color:#fff;
+        padding: 6px;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        display:inline-block;
+      }
+      blockquote {
+        margin: 2em 10px;
+        padding: 1em 10px;
+        border-left: 10px solid #edf0f5;
+        font-family: 'Open Sans';
+        font-size: 1.5em;
+      }
+      blockquote .name {
+        font-weight:bold;
+        font-family: "Montserrat";
+      }
+      .responsive-show {
+        display:none;
+      }
+      @media (max-width: 1000px) {
+        .header {
+          font-size: 1.66em;
+        }
+        h2 {
+          font-size: 3em;
+        }
+      }
+      @media (max-width: 500px) {
+        p {
+          font-size:1.2em;
+        }
+        li {
+          font-size:1.2em;
+        }
+        blockquote {
+          font-size:1.2em;
+        }
+        h2 {
+          font-size:2.3em;
+        }
+        .responsive-hidden {
+          display:none;
+          visibility: hidden;
+        }
+        .responsive-show {
+          display:inline;
+          visibility: visible;
+        }
+      }
+    </style>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  </head>
+  <body>
+    <div class= "header">
+      {{#pictureBool}}
+      <img src= "{{basics.picture}}" width= "75px" height= "75px" class= "picture">
+      {{/pictureBool}}
+      <h1>{{basics.name}}</h1>
+      <h3 class= "label">{{basics.capitalLabel}}</h3>
+      <div class= "contact-header">
+        {{#basics.location}}
+        {{basics.location.city}}, {{basics.location.region}}, {{basics.location.countryCode}}<br>
+        {{basics.location.address}}
+        {{/basics.location}}
+      </div>
+      <div id= "contact">
+        <br>
+        {{#basics.email}}
+        <div class= "contact-header">
+          EMAIL <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "mailto:{{basics.email}}" target= "_blank">{{basics.email}}</a> <span class= "responsive-show"><br><br></span>
+        </div>
+        {{/basics.email}}
+        {{#phoneBool}}
+        <div class= "contact-header">
+          PHONE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span>{{basics.phone}} <span class= "responsive-show"><br><br></span>
+        </div>
+        {{/phoneBool}}
+        {{#websiteBool}}
+        <div class= "contact-header">
+          WEBSITE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "{{basics.website}}" target= "_blank">{{basics.website}}</a> <span class= "responsive-show"><br><br></span>
+        </div>
+        {{/websiteBool}}
+      </div>
+      <br>
+      <div id= "profiles">
+        {{#basics.profiles}}
+        <div class= "contact-header">PROFILES</div><br>
+        <p class= "profile"><a href= "{{url}}" target= "_blank" class= "profile">{{network}}</a></p>
+        {{/basics.profiles}}
+      </div>		
+    </div>
+    <div class= "main">
+      {{#aboutBool}}
+      <div id= "about">
+        <h2><i class= "fa fa-user left"></i> ABOUT</h2>
+        <p>
+          {{basics.summary}}
+        </p>
+      </div>
+      {{/aboutBool}}
+      {{#workBool}}
+      <div id= "work">
+        <h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
+        {{#work}}
+        <div class= "job">
+          <h3>{{position}}, {{company}}</h3>
+          <h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</h4>
+          <p>{{summary}}</p>
+          {{#workHighlights}}
+          <h4>HIGHLIGHTS</h4>
+          <ul>
+            {{#highlights}}
+            <li>{{.}}</li>
+            {{/highlights}}
+          </ul>
+          {{/workHighlights}}
+        </div>
+        {{/work}}
+      </div>
+      {{/workBool}}
+      {{#volunteerBool}}
+      <div id= "volunteer">
+        <h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
+        {{#volunteer}}
+        <h3>{{position}}, {{organization}}</h3>
+        <h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</h4>
+        <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
+        {{#volunterHighlights}}
+        <h4>HIGHLIGHTS</h4>
+        <ul>
+          {{#highlights}}
+          <li>{{.}}</li>
+          {{/highlights}}
+        </ul>
+        {{/volunterHighlights}}
+        {{/volunteer}}
+      </div>
+      {{/volunteerBool}}
+      {{#skillsBool}}
+      <div id= "skills">
+        <h2><i class= "fa fa-tasks left"></i> SKILLS</h2>
+        {{#skills}}
+        <h3 class= "skills">{{name}}</h3>
+        {{#keywords}}
+        <span class= "keywords">{{.}}</span>
+        {{/keywords}}
+        {{/skills}}
+      </div><br>
+      {{/skillsBool}}
+      {{#educationBool}}
+      <div id= "education">
+        <h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
+        {{#education}}
+        <h3>{{studyType}}, {{area}} - {{institution}}</h3>
+        <h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}{{#gpaBool}}<br>
+          GPA: {{gpa}}{{/gpaBool}}</h4>
+        {{#educationCourses}}
+        <h4>COURSES</h4>
+        <ul>
+          {{#courses}}
+          <li>{{.}}</li>
+          {{/courses}}
+        </ul>
+        {{/educationCourses}}
+        {{/education}}
+      </div>
+      {{/educationBool}}
+      {{#awardsBool}}
+      <div id= "awards">
+        <h2><i class= "fa fa-trophy left"></i> AWARDS</h2>
+        {{#awards}}
+        <h3>{{title}} - {{awarder}}</h3>
+        <h4>{{day}} {{month}} {{year}}</h4>
+        <p>{{summary}}</p>
+        {{/awards}}
+      </div>
+      {{/awardsBool}}
+      {{#publicationsBool}}
+      <div id= "publications">
+        <h2><i class= "fa fa-book left"></i> PUBLICATIONS</h2>
+        {{#publications}}
+        <h3>{{name}}</h3>
+        <h4>{{day}} {{month}} {{year}}</h4>
+        <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
+        {{/publications}}
+      </div>
+      {{/publicationsBool}}
+      {{#interestsBool}}
+      <div id= "interests">
+        <h2><i class= "fa fa-star left"></i> INTERESTS</h2>
+        {{#interests}}
+        <h3 class= "skills">{{name}}</h3>
+        {{#keywords}}
+        <span class= "keywords">{{.}}</span>
+        {{/keywords}}
+        {{/interests}}
+      </div>
+      {{/interestsBool}}
+      {{#languagesBool}}
+      <div id= "languages">
+        <h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
+        {{#languages}}
+        <h3>{{language}}</h3>
+        <h4>Fluency: {{fluency}}</h4>
+        {{/languages}}
+      </div>
+      {{/languagesBool}}
+      {{#referencesBool}}
+      <div id= "references">
+        <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
+        {{#references}}
+        <blockquote>
+          {{reference}}
+          <div class= "name"><br>- {{name}}</div>
+        </blockquote><br>
+        {{/references}}
+      </div>
+      {{/referencesBool}}
+
+    </div>
+  </body>
+</html>
