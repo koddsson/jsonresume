@@ -195,7 +195,7 @@
         {{#work}}
         <div class= "job">
           <h3>{{position}}, {{company}}</h3>
-          <h4>{{startDate}} - {{endDate}}</h4>
+          <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
           <p>{{summary}}</p>
           {{#workHighlights}}
           <h4>HIGHLIGHTS</h4>
@@ -212,7 +212,7 @@
         <h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
         {{#volunteer}}
         <h3>{{position}}, {{organization}}</h3>
-        <h4>{{startDate}} - {{endDate}}</h4>
+        <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
         <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
         {{#volunterHighlights}}
         <h4>HIGHLIGHTS</h4>
@@ -237,7 +237,7 @@
         <h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
         {{#education}}
         <h3>{{studyType}}, {{area}} - {{institution}}</h3>
-        <h4>{{startDate}} - {{endDate}}{{#gpa}}<br>
+        <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span>{{#gpa}}<br>
           GPA: {{gpa}}{{/gpa}}</h4>
         {{#educationCourses}}
         <h4>COURSES</h4>
