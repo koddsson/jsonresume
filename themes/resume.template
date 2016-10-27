@@ -310,5 +310,13 @@
       else window.addEventListener('load', loadDeferredStyles);
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js" integrity="sha256-lDcU9wi187tvmD2D2AvfRvhuVthZ5UxIP7Oh+Rk3yNw=" crossorigin="anonymous"></script>
+    <script>
+      // Set all the dates to a prettier format.
+      [].forEach.call(document.querySelectorAll('h4 > .date'), (h4) => {
+        if (h4.innerHTML) {
+          h4.innerHTML = moment(h4.innerHTML).format('MMMM YYYY');
+        }
+      });
+    </script>
   </body>
 </html>
