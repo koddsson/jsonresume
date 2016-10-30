@@ -20,7 +20,7 @@ exports.handle = (event, context, callback) => {
     console.log(valid);
 
     if (!valid) {
-      callback(ajv.errorsText());
+      callback(ajv.errors);
     } else {
       // Add it into dynamodb
       // (echo it back for now)
