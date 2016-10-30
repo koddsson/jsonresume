@@ -3,10 +3,6 @@
   "title": "Resume Schema",
   "type": "object",
   "additionalProperties": false,
-  "username": {
-    "type": "string",
-    "description": "Username on jsonresume.io"
-  },
   "properties": {
     "basics": {
       "type": "object",
