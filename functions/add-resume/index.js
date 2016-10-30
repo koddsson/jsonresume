@@ -8,13 +8,16 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 
 // TODO: Convert to promises?
 exports.handle = (event, context, callback) => {
+  console.log(event);
   fs.readFile('./schema.json', (err, schema) => {
+    console.log(schema);
     if (err) {
       callback(err);
     }
 
     // Validate the payload (event) against the JSON schema
     const valid = ajv.validate(schema, event);
+    console.log(valid);
 
     if (!valid) {
       callback(ajv.errorsText());
