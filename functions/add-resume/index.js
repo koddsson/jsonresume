@@ -23,7 +23,19 @@ exports.handle = (event, context, callback) => {
       // Add it into dynamodb
       // (echo it back for now)
       event.body.username = event.username;
-      callback(null, event.body);
+
+      const params = {
+        Item: event.body,
+        TableName: 'json-resume',
+      };
+
+      dynamodb.putItem(params, function(err, data) {
+        if (err) {
+          callback(err);
+        } else {
+          callback(null, data);
+        }
+      });
     }
   });
 }
