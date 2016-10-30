@@ -9,23 +9,21 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 // TODO: Convert to promises?
 exports.handle = (event, context, callback) => {
   console.log(event);
-  const username = event.username;
-  delete event.username;
   fs.readFile('./schema.json', 'utf-8', (err, schema) => {
     if (err) {
       callback(err);
     }
 
     // Validate the payload (event) against the JSON schema
-    const valid = ajv.validate(JSON.parse(schema), event);
+    const valid = ajv.validate(JSON.parse(schema), event.body);
 
     if (!valid) {
       callback(JSON.stringify(ajv.errors));
     } else {
       // Add it into dynamodb
       // (echo it back for now)
-      event.username = username;
-      callback(null, event);
+      event.body.username = event.username;
+      callback(null, event.body);
     }
   });
 }
