@@ -10,14 +10,12 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 exports.handle = (event, context, callback) => {
   console.log(event);
   fs.readFile('./schema.json', 'utf-8', (err, schema) => {
-    console.log(schema);
     if (err) {
       callback(err);
     }
 
     // Validate the payload (event) against the JSON schema
     const valid = ajv.validate(JSON.parse(schema), event);
-    console.log(valid);
 
     if (!valid) {
       callback(JSON.stringify(ajv.errors));
