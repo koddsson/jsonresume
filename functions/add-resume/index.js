@@ -10,7 +10,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 exports.handle = (event, context, callback) => {
   console.log(event);
   const username = event.username;
-  del event.username;
+  delete event.username;
   fs.readFile('./schema.json', 'utf-8', (err, schema) => {
     if (err) {
       callback(err);
