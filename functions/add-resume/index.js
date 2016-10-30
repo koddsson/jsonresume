@@ -29,7 +29,7 @@ exports.handle = (event, context, callback) => {
         TableName: 'json-resume',
       };
 
-      dynamodb.putItem(params, function(err, data) {
+      docClient.putItem(params, function(err, data) {
         if (err) {
           callback(err);
         } else {
