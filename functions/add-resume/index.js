@@ -29,7 +29,7 @@ exports.handle = (event, context, callback) => {
         TableName: 'json-resume',
       };
 
-      docClient.putItem(params, function(err, data) {
+      docClient.put(params, function(err, data) {
         if (err) {
           callback(err);
         } else {
