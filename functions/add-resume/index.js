@@ -7,7 +7,8 @@ exports.handle = (event, context, callback) => {
   // Take the payload and put it into DynamoDB?
   console.log(event);
   console.log(context);
-  callback({
-    event, context
-  });
+  callback(
+    null,
+    {event, context}
+  );
 }
