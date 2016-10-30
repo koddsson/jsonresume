@@ -9,6 +9,8 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 // TODO: Convert to promises?
 exports.handle = (event, context, callback) => {
   console.log(event);
+  const username = event.username;
+  del event.username;
   fs.readFile('./schema.json', 'utf-8', (err, schema) => {
     if (err) {
       callback(err);
@@ -22,6 +24,7 @@ exports.handle = (event, context, callback) => {
     } else {
       // Add it into dynamodb
       // (echo it back for now)
+      event.username = username;
       callback(null, event);
     }
   });
