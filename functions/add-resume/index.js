@@ -16,7 +16,7 @@ exports.handle = (event, context, callback) => {
     }
 
     // Validate the payload (event) against the JSON schema
-    const valid = ajv.validate(schema, event);
+    const valid = ajv.validate(JSON.parse(schema), event);
     console.log(valid);
 
     if (!valid) {
