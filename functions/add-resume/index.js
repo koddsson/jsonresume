@@ -1,15 +1,15 @@
-const fs = require('fs');
-const AWS = require('aws-sdk');
-const Ajv = require('ajv');
+const fs = require("fs");
+const AWS = require("aws-sdk");
+const Ajv = require("ajv");
 const ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
 
-AWS.config.update({region: 'eu-west-1'});
+AWS.config.update({ region: "eu-west-1" });
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 // TODO: Convert to promises?
 exports.handle = (event, context, callback) => {
   console.log(event);
-  fs.readFile('./schema.json', 'utf-8', (err, schema) => {
+  fs.readFile("./schema.json", "utf-8", (err, schema) => {
     if (err) {
       callback(err);
     }
@@ -26,7 +26,7 @@ exports.handle = (event, context, callback) => {
 
       const params = {
         Item: event.body,
-        TableName: 'json-resume',
+        TableName: "json-resume"
       };
 
       docClient.put(params, function(err, data) {
@@ -38,4 +38,4 @@ exports.handle = (event, context, callback) => {
       });
     }
   });
-}
+};

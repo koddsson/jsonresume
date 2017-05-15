@@ -4,6 +4,9 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "username": {
+      "type": "string"
+    },
     "basics": {
       "type": "object",
       "additionalProperties": true,

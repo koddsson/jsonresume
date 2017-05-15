@@ -191,104 +191,122 @@
       </div>
       {{/basics.summary}}
       <div id= "work">
-        <h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
-        {{#work}}
-        <div class= "job">
-          <h3>{{position}}, {{company}}</h3>
-          <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
-          <p>{{summary}}</p>
-          {{#workHighlights}}
-          <h4>HIGHLIGHTS</h4>
-          <ul>
-            {{#highlights}}
-            <li>{{.}}</li>
-            {{/highlights}}
-          </ul>
-          {{/workHighlights}}
-        </div>
-        {{/work}}
+        {{#work.length}}
+          <h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
+          {{#work}}
+            <div class= "job">
+              <h3>{{position}}, {{company}}</h3>
+              <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
+              <p>{{summary}}</p>
+              {{#workHighlights}}
+              <h4>HIGHLIGHTS</h4>
+              <ul>
+                {{#highlights}}
+                <li>{{.}}</li>
+                {{/highlights}}
+              </ul>
+              {{/workHighlights}}
+            </div>
+          {{/work}}
+        {{/work.length}}
       </div>
       <div id= "volunteer">
-        <h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
-        {{#volunteer}}
-        <h3>{{position}}, {{organization}}</h3>
-        <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
-        <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
-        {{#volunterHighlights}}
-        <h4>HIGHLIGHTS</h4>
-        <ul>
-          {{#highlights}}
-          <li>{{.}}</li>
-          {{/highlights}}
-        </ul>
-        {{/volunterHighlights}}
-        {{/volunteer}}
+        {{#volunteer.length}}
+          <h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
+          {{#volunteer}}
+            <h3>{{position}}, {{organization}}</h3>
+            <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
+            <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
+            {{#volunterHighlights}}
+              <h4>HIGHLIGHTS</h4>
+              <ul>
+                {{#highlights}}
+                <li>{{.}}</li>
+                {{/highlights}}
+              </ul>
+            {{/volunterHighlights}}
+          {{/volunteer}}
+        {{/volunteer.length}}
       </div>
       <div id= "skills">
-        <h2><i class= "fa fa-tasks left"></i> SKILLS</h2>
-        {{#skills}}
-        <h3 class= "skills">{{name}}</h3>
-        {{#keywords}}
-        <span class= "keywords">{{.}}</span>
-        {{/keywords}}
-        {{/skills}}
+        {{#skills.length}}
+          <h2><i class= "fa fa-tasks left"></i> SKILLS</h2>
+          {{#skills}}
+            <h3 class= "skills">{{name}}</h3>
+            {{#keywords}}
+              <span class= "keywords">{{.}}</span>
+            {{/keywords}}
+          {{/skills}}
+        {{/skills.length}}
       </div><br>
       <div id= "education">
-        <h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
-        {{#education}}
-        <h3>{{studyType}}, {{area}} - {{institution}}</h3>
-        <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span>{{#gpa}}<br>
-          GPA: {{gpa}}{{/gpa}}</h4>
-        {{#educationCourses}}
-        <h4>COURSES</h4>
-        <ul>
-          {{#courses}}
-          <li>{{.}}</li>
-          {{/courses}}
-        </ul>
-        {{/educationCourses}}
-        {{/education}}
+        {{#education.length}}
+          <h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
+          {{#education}}
+            <h3>{{studyType}}, {{area}} - {{institution}}</h3>
+            <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span>{{#gpa}}<br>
+              GPA: {{gpa}}{{/gpa}}</h4>
+            {{#educationCourses}}
+            <h4>COURSES</h4>
+            <ul>
+              {{#courses}}
+                <li>{{.}}</li>
+              {{/courses}}
+            </ul>
+            {{/educationCourses}}
+          {{/education}}
+        {{/education.length}}
       </div>
-      <div id= "awards">
-        <h2><i class= "fa fa-trophy left"></i> AWARDS</h2>
-        {{#awards}}
-        <h3>{{title}} - {{awarder}}</h3>
-        <h4>{{day}} {{month}} {{year}}</h4>
-        <p>{{summary}}</p>
-        {{/awards}}
+      <div id="awards">
+        {{#awards.length}}
+          <h2><i class= "fa fa-trophy left"></i> AWARDS</h2>
+          {{#awards}}
+            <h3>{{title}} - {{awarder}}</h3>
+            <h4>{{day}} {{month}} {{year}}</h4>
+            <p>{{summary}}</p>
+          {{/awards}}
+        {{/awards.length}}
       </div>
-      <div id= "publications">
-        <h2><i class= "fa fa-book left"></i> PUBLICATIONS</h2>
-        {{#publications}}
-        <h3>{{name}}</h3>
-        <h4>{{day}} {{month}} {{year}}</h4>
-        <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
-        {{/publications}}
+      <div id="publications">
+        {{#publications.length}}
+          <h2><i class= "fa fa-book left"></i> PUBLICATIONS</h2>
+          {{#publications}}
+            <h3>{{name}}</h3>
+            <h4>{{day}} {{month}} {{year}}</h4>
+            <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
+          {{/publications}}
+        {{/publications.length}}
       </div>
       <div id= "interests">
-        <h2><i class= "fa fa-star left"></i> INTERESTS</h2>
-        {{#interests}}
-        <h3 class= "skills">{{name}}</h3>
-        {{#keywords}}
-        <span class= "keywords">{{.}}</span>
-        {{/keywords}}
-        {{/interests}}
+        {{#interests.length}}
+          <h2><i class= "fa fa-star left"></i> INTERESTS</h2>
+          {{#interests}}
+            <h3 class= "skills">{{name}}</h3>
+            {{#keywords}}
+              <span class= "keywords">{{.}}</span>
+            {{/keywords}}
+          {{/interests}}
+        {{/interests.length}}
       </div>
       <div id= "languages">
-        <h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
-        {{#languages}}
-        <h3>{{language}}</h3>
-        <h4>Fluency: {{fluency}}</h4>
-        {{/languages}}
+        {{#languages.length}}
+          <h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
+          {{#languages}}
+            <h3>{{language}}</h3>
+            <h4>Fluency: {{fluency}}</h4>
+          {{/languages}}
+        {{/languages.length}}
       </div>
       <div id= "references">
-        <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
-        {{#references}}
-        <blockquote>
-          {{reference}}
-          <div class= "name"><br>- {{name}}</div>
-        </blockquote><br>
-        {{/references}}
+        {{#references.length}}
+          <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
+          {{#references}}
+          <blockquote>
+            {{reference}}
+            <div class= "name"><br>- {{name}}</div>
+          </blockquote><br>
+          {{/references}}
+        {{/references.length}}
       </div>
 
     </div>
