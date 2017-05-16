@@ -198,12 +198,14 @@
               <h3>{{position}}, {{company}}</h3>
               <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
               <p>{{summary}}</p>
-              <h4>HIGHLIGHTS</h4>
-              <ul>
-                {{#highlights}}
-                <li>{{.}}</li>
-                {{/highlights}}
-              </ul>
+              {{#highlights.0}}
+                <h4>HIGHLIGHTS</h4>
+                <ul>
+                  {{#highlights}}
+                  <li>{{.}}</li>
+                  {{/highlights}}
+                </ul>
+              {{/highlights.0}}
             </div>
           {{/work}}
         {{/work.length}}
@@ -215,12 +217,14 @@
             <h3>{{position}}, {{organization}}</h3>
             <h4><span class="date">{{startDate}}</span> - <span class="date">{{endDate}}</span></h4>
             <p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
-            <h4>HIGHLIGHTS</h4>
-            <ul>
-              {{#highlights}}
-              <li>{{.}}</li>
-              {{/highlights}}
-            </ul>
+            {{#highlights.0}}
+              <h4>HIGHLIGHTS</h4>
+              <ul>
+                {{#highlights}}
+                <li>{{.}}</li>
+                {{/highlights}}
+              </ul>
+            {{/highlights.0}}
           {{/volunteer}}
         {{/volunteer.length}}
       </div>
