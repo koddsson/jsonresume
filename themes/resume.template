@@ -95,7 +95,7 @@
         display:inline-block;
       }
       blockquote {
-        margin: 2em 10px;
+        margin: 0.5em 10px;
         padding: 1em 10px;
         border-left: 10px solid #edf0f5;
         font-family: 'Open Sans';
@@ -105,6 +105,11 @@
         font-weight:bold;
         font-family: "Montserrat";
       }
+
+      blockquote .reference {
+        padding-bottom: 20px;
+      }
+
       .responsive-show {
         display:none;
       }
@@ -306,9 +311,12 @@
           <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
           {{#references}}
           <blockquote>
-            {{reference}}
+            {{#reference}} 
+              <div class="reference">{{reference}}</div>
+            {{/reference}} 
             <div>
-              <span class= "name"><br>- {{name}}</span> <span>({{occupation}})</span>
+              <span class="name">{{name}}</span> <span>({{occupation}})</span>
+            </div>
             <div>{{contactInfo}}</div>
           </blockquote><br>
           {{/references}}
