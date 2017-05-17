@@ -1,0 +1,11 @@
+{
+  "references.uponRequest": true,
+  "references": [
+    {
+      "name": "Kristján Oddsson",
+      "occupation": "Developer",
+      "contactInfo": "koddsson@gmail.com",
+      "reference": "Thinks I'm a pretty cool dude."
+    }
+  ]
+}
