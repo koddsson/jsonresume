@@ -70,7 +70,12 @@
           "additionalItems": false,
           "items": {
             "type": "object",
-            "additionalProperties": true,
+            "additionalProperties": false,
+            "required": [
+              "network",
+              "username",
+              "url"
+            ],
             "properties": {
               "network": {
                 "type": "string",

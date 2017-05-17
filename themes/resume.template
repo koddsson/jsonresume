@@ -177,7 +177,7 @@
         <div class= "contact-header">PROFILES</div><br>
         {{/basics.profiles.length}}
         {{#basics.profiles}}
-        <p class= "profile"><a href= "{{url}}" target= "_blank" class= "profile">{{network}}</a></p>
+        <p class= "profile"><a href="{{url}}" target="_blank" class="profile">{{network}}</a></p>
         {{/basics.profiles}}
       </div>		
     </div>
