@@ -360,11 +360,22 @@
       "additionalItems": false,
       "items": {
         "type": "object",
-        "additionalProperties": true,
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string",
             "description": "e.g. Timothy Cook"
+          },
+          "occupation": {
+            "type": "string",
+            "description": "e.g. Developer, CEO"
+          },
+          "contactInfo": {
+            "type": "string",
+            "description": "e.g. koddsson@gmail, 511-1192"
           },
           "reference": {
             "type": "string",
@@ -372,6 +383,10 @@
           }
         }
       }
+    },
+    "references.uponRequest": {
+      "tpye": "boolean",
+      "description": "If you will be providing references upon request"
     },
     "meta": {
       "type": "object",
