@@ -1,3 +1,6 @@
 .DS_Store
 node_modules/
 project.json
+
+test_documents/*
+!test_documents/test.json
