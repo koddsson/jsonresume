@@ -385,7 +385,7 @@
       }
     },
     "referencesUponRequest": {
-      "tpye": "boolean",
+      "type": "boolean",
       "description": "If you will be providing references upon request"
     },
     "meta": {
