@@ -1,0 +1,11 @@
+{
+  "name": "jsonresume",
+  "version": "1.0.0",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "mustache": "^2.3.0"
+  },
+  "scripts": {
+    "start": "node dev.js"
+  }
+}
