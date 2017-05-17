@@ -288,7 +288,7 @@
           {{/interests}}
         {{/interests.length}}
       </div>
-      <div id= "languages">
+      <div id="languages">
         {{#languages.length}}
           <h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
           {{#languages}}
@@ -298,12 +298,18 @@
         {{/languages.length}}
       </div>
       <div id= "references">
+        {{#referencesUponRequest}}
+          <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
+          <p>References are available upon request</p>
+        {{/referencesUponRequest}}
         {{#references.length}}
           <h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
           {{#references}}
           <blockquote>
             {{reference}}
-            <div class= "name"><br>- {{name}}</div>
+            <div>
+              <span class= "name"><br>- {{name}}</span> <span>({{occupation}})</span>
+            <div>{{contactInfo}}</div>
           </blockquote><br>
           {{/references}}
         {{/references.length}}
