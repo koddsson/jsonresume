@@ -1,11 +1,14 @@
 {
   "name": "jsonresume",
   "version": "1.0.0",
-  "devDependencies": {
-    "express": "^4.15.3",
-    "mustache": "^2.3.0"
-  },
   "scripts": {
     "start": "node dev.js"
+  },
+  "dependencies": {
+    "ajv": "^6.1.1",
+    "aws-sdk": "^2.202.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.3",
+    "mustache": "^2.3.0"
   }
 }
