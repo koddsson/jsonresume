@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "aws-sdk": "^2.6.11",
-    "mustache": "^2.2.1"
-  }
-}
