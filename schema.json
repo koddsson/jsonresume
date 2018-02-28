@@ -73,8 +73,7 @@
                         "additionalProperties": false,
                         "required": [
                             "network",
-                            "username",
-                            "url"
+                            "username"
                         ],
                         "properties": {
                             "network": {
