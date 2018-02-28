@@ -2,7 +2,7 @@
   "name": "jsonresume",
   "version": "1.0.0",
   "scripts": {
-    "start": "node dev.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "ajv": "^6.1.1",
