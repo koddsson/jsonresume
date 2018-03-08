@@ -10,7 +10,8 @@ describe('/:username', () => {
   });
   test('it should accept a valid JSON resume via POST', async () => {
     const response = await request(app).post('/koddsson').send(testResume)
-    expect(response.statusCode).toBe(200);
+    expect(response.statusCode).toBe(302);
+    expect(response.headers.location).toBe('https://jsonresume.ams3.digitaloceanspaces.com/koddsson');
     expect(response.body.errors).toEqual([]);
   });
   test('it should reject invalid JSON resume via POST', async () => {
