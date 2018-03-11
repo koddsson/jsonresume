@@ -267,7 +267,7 @@
           <h2><i class= "fa fa-trophy left"></i> AWARDS</h2>
           {{#awards}}
             <h3>{{title}} - {{awarder}}</h3>
-            <h4>{{day}} {{month}} {{year}}</h4>
+            <h4>{{date}}</h4>
             <p>{{summary}}</p>
           {{/awards}}
         {{/awards.length}}
