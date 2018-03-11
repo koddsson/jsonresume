@@ -1,6 +1,6 @@
-# jsonresume monorepo
+# jsonresume
 
-I'm a _huge_ fan of the [jsonresume]() project. I have some issues with the
+I'm a _huge_ fan of the [jsonresume](https://jsonresume.org/) project. I have some issues with the
 current state of it.
 
 - The standard/schema seems very complicated where it should be easy to read.
