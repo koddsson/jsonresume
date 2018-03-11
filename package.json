@@ -10,7 +10,8 @@
     "aws-sdk": "^2.202.0",
     "body-parser": "^1.18.2",
     "express": "^4.15.3",
-    "mustache": "^2.3.0"
+    "mustache": "^2.3.0",
+    "node": "^9.8.0"
   },
   "devDependencies": {
     "jest": "^22.4.2",

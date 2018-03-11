@@ -4,3 +4,5 @@ project.json
 
 test_documents/*
 !test_documents/test.json
+
+id_rsa.pem
