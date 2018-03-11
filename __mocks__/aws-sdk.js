@@ -7,10 +7,12 @@ AWS.S3 = function() {
 		},
 		headObject: (data, callback) => {
 			if (data.Key === 'existing-user') {
-				callback(null, {Metadata: {auth: new Buffer(data.Key).toString('base64')}})
+				callback(null, {
+					Metadata: { auth: new Buffer(data.Key).toString('base64') },
+				})
 			}
-			callback({code: 'NotFound'})
-		}
+			callback({ code: 'NotFound' })
+		},
 	}
 }
 
