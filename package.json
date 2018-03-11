@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "eslint --fix . && jest"
   },
   "dependencies": {
     "ajv": "^6.2.1",
