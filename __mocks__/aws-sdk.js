@@ -13,6 +13,9 @@ AWS.S3 = function() {
 			}
 			callback({ code: 'NotFound' })
 		},
+		getObject: (data, callback) => {
+			callback(null, { Body: '' })
+		},
 	}
 }
 

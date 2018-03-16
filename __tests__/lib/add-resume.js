@@ -4,7 +4,7 @@ const testResume = require('../../test_documents/test.json')
 
 jest.mock('crypto')
 
-describe('/:username', () => {
+describe('POST /:username', () => {
 	test('it should error when the POST has empty body', async () => {
 		const response = await request(app).post('/new-user')
 		expect(response.statusCode).toBe(400)

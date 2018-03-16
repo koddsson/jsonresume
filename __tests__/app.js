@@ -10,13 +10,3 @@ describe('/', () => {
 		)
 	})
 })
-
-describe('/:username', () => {
-	test('should redirect to the correct resume', async () => {
-		const response = await request(app).get('/koddsson')
-		expect(response.statusCode).toBe(302)
-		expect(response.headers.location).toBe(
-			'https://jsonresume.ams3.digitaloceanspaces.com/koddsson',
-		)
-	})
-})
