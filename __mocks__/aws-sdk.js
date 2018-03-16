@@ -14,6 +14,9 @@ AWS.S3 = function() {
 			callback({ code: 'NotFound' })
 		},
 		getObject: (data, callback) => {
+			if (data.Key === 'not-a-user') {
+				callback({ statusCode: 404 })
+			}
 			callback(null, { Body: '' })
 		},
 	}
