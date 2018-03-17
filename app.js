@@ -18,6 +18,8 @@ app.get('/site', (req, res) =>
 	res.sendFile(path.join(__dirname + '/site/index.html')),
 )
 
+app.use(express.static('public'))
+
 function ensureSecure(req, res, next) {
 	if (req.secure) {
 		return next()
