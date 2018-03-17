@@ -20,13 +20,6 @@ app.get('/site', (req, res) =>
 
 app.use(express.static('public'))
 
-app.use('*', function(req, res, next) {
-	if (process.env.ENV !== 'production' || req.secure) {
-		return next()
-	}
-	res.redirect('https://' + req.hostname + req.originalUrl)
-})
-
 app.get('/:username', getResume)
 app.post('/:username', addResume)
 
