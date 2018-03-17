@@ -20,16 +20,12 @@ app.get('/site', (req, res) =>
 
 app.use(express.static('public'))
 
-function ensureSecure(req, res, next) {
-	if (req.secure) {
+app.use('*', function(req, res, next) {
+	if (process.env.ENV !== 'production' || req.secure) {
 		return next()
 	}
 	res.redirect('https://' + req.host + req.url)
-}
-
-if (process.env.ENV === 'production') {
-	app.all('*', ensureSecure)
-}
+})
 
 app.get('/:username', getResume)
 app.post('/:username', addResume)
