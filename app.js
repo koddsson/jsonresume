@@ -24,7 +24,7 @@ app.use('*', function(req, res, next) {
 	if (process.env.ENV !== 'production' || req.secure) {
 		return next()
 	}
-	res.redirect('https://' + req.host + req.url)
+	res.redirect('https://' + req.hostname + req.originalUrl)
 })
 
 app.get('/:username', getResume)
