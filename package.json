@@ -2,7 +2,7 @@
   "name": "jsonresume",
   "version": "1.0.0",
   "scripts": {
-    "start": "node index.js",
+    "start": "ENV=production node index.js",
     "test": "prettier-eslint --write \"**/*.js\" && eslint --fix . && jest"
   },
   "dependencies": {

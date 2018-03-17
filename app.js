@@ -27,7 +27,9 @@ function ensureSecure(req, res, next) {
 	res.redirect('https://' + req.host + req.url)
 }
 
-app.all('*', ensureSecure)
+if (process.env.ENV === 'production') {
+	app.all('*', ensureSecure)
+}
 
 app.get('/:username', getResume)
 app.post('/:username', addResume)
