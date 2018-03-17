@@ -4,5 +4,6 @@ project.json
 
 test_documents/*
 !test_documents/test.json
+coverage/
 
 id_rsa.pem

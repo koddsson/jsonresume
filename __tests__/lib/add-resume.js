@@ -29,9 +29,7 @@ describe('POST /:username', () => {
 			.set({ auth: 'new-user' })
 			.send(testResume)
 		expect(response.statusCode).toBe(302)
-		expect(response.headers.location).toBe(
-			'https://jsonresume.ams3.digitaloceanspaces.com/new-user',
-		)
+		expect(response.headers.location).toBe('https://jsonresume.io/new-user')
 		expect(response.body.errors).toEqual([])
 	})
 
