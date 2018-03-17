@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const bodyParser = require('body-parser')
 
 const app = express()
@@ -11,6 +12,10 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) =>
 	res.redirect('https://github.com/koddsson/jsonresume-monorepo'),
+)
+
+app.get('/site', (req, res) =>
+	res.sendFile(path.join(__dirname + '/site/index.html')),
 )
 
 app.get('/:username', getResume)
