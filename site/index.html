@@ -11,6 +11,7 @@
       .main {
         max-width: 860px;
         margin: auto;
+        line-height: 1.65;
       }
       img {
         margin: 2em auto;
@@ -34,6 +35,7 @@
       <p>Welcome to jsonresume.io. You can upload your JSON resume according to the spec and we'll render it all pretty for you. Easy peasy.</p>
       <img src="upload.png" />
       <p>Make sure you provide the <code>Auth</code> header and remember the password for it. You will need it to update your resume.</p>
+      <p>We use a validator to make sure the JSON payload you POST is correct. We use a <a href="http://json-schema.org/">JSON Schema</a> to do this and you can view our schema <a href="https://github.com/koddsson/jsonresume/blob/master/schema.json">here</a> to see what fields are available and which are required. A good first start in building your resume could be copy-ing someone elses. You can do this by viewing their compiled resume on <code>https://jsonresume.io/[username]</code> and the JSON for that resume on <code>https://jsonresume.io/[username].json</code>. For example, mine is on <a href="https://jsonresume.io/koddsson">jsonresume.io/koddsson</a> and the JSON is on <a href="https://jsonresume.io/koddsson.json">jsonresume.io/koddsson.json</a>.</p>
       <p>Give it a spin and let me know what you think either on <a href="https://github.com/koddsson/jsonresume">GitHub</a> or <a href="https://twitter.com">Twitter</a>.</p>
     </div>
   </body>
