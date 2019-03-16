@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "plugin:github/es6",
+    "plugin:github/node"
+  ],
+  "overrides": [
+    {
+      "files": ["__tests__/**/*.js","__mocks__/**/*.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
