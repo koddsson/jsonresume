@@ -6,10 +6,10 @@
     "test": "github-lint && jest"
   },
   "dependencies": {
-    "ajv": "^6.2.1",
-    "aws-sdk": "^2.207.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.15.3",
+    "ajv": "^6.10.0",
+    "aws-sdk": "^2.422.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "mustache": "^2.3.0"
   },
   "devDependencies": {
