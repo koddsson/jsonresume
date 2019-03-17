@@ -1,6 +1,6 @@
 # jsonresume
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/koddsson/jsonresume-monorepo.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/koddsson/jsonresume.svg)](https://greenkeeper.io/)
 
 I'm a _huge_ fan of the [jsonresume](https://jsonresume.org/) project. I have some issues with the
 current state of it.
