@@ -16,7 +16,7 @@
     "eslint": "^5.15.2",
     "eslint-plugin-github": "^2.0.0",
     "jest": "^24.5.0",
-    "prettier-eslint-cli": "^4.7.1",
+    "prettier-eslint-cli": "^5.0.0",
     "supertest": "^4.0.2"
   }
 }
