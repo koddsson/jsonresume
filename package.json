@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "ajv": "^6.10.0",
-    "aws-sdk": "^2.422.0",
+    "aws-sdk": "^2.507.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mustache": "^3.0.1"
