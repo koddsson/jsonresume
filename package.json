@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "eslint": "^5.15.2",
-    "eslint-plugin-github": "^2.0.0",
+    "eslint-plugin-github": "^3.2.0",
     "jest": "^24.5.0",
     "prettier-eslint-cli": "^4.7.1",
     "supertest": "^4.0.2"
