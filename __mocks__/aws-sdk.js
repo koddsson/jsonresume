@@ -1,6 +1,6 @@
 const AWS = jest.genMockFromModule('aws-sdk')
 
-AWS.S3 = function() {
+AWS.S3 = function () {
   return {
     putObject: (data, callback) => {
       callback(null)
