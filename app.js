@@ -1,11 +1,16 @@
-const express = require('express')
-const path = require('path')
-const bodyParser = require('body-parser')
+import express from 'express'
+import path from 'path'
+import bodyParser from 'body-parser'
+
+import addResume from './lib/add-resume.js'
+import getResume from './lib/get-resume.js'
+
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express()
-
-const addResume = require('./lib/add-resume')
-const getResume = require('./lib/get-resume')
 
 // parse application/json
 app.use(bodyParser.json())
@@ -17,4 +22,4 @@ app.use(express.static('public'))
 app.get('/:username', getResume)
 app.post('/:username', addResume)
 
-module.exports = app
+export default app

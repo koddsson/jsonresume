@@ -1,5 +1,6 @@
 {
   "name": "jsonresume",
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "start": "ENV=production node index.js",
@@ -18,10 +19,12 @@
   "prettier": "@github/prettier-config",
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
+    "chai": "^4.3.6",
     "eslint": "^8.15.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.0",
+    "sinon": "^14.0.0",
     "supertest": "^4.0.2"
   }
 }
