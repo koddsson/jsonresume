@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ENV=production node index.js",
-    "test": "github-lint && jest"
+    "test": "eslint . && jest"
   },
   "dependencies": {
     "ajv": "^6.10.0",
@@ -12,9 +12,12 @@
     "express": "^4.16.4",
     "mustache": "^3.0.1"
   },
+  "prettier": "@github/prettier-config",
   "devDependencies": {
-    "eslint": "^5.15.2",
-    "eslint-plugin-github": "^2.0.0",
+    "@github/prettier-config": "^0.0.4",
+    "eslint": "^8.15.0",
+    "eslint-plugin-github": "^4.3.6",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^24.5.0",
     "prettier-eslint-cli": "^5.0.0",
     "supertest": "^4.0.2"
