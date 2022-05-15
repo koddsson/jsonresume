@@ -1,10 +1,16 @@
 {
-  "extends": [
-    "plugin:github/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+    "node/no-unpublished-require": [
+      "error",
+      {
+        "allowModules": ["supertest"]
+      }
+    ]
+  },
   "overrides": [
     {
-      "files": ["__tests__/**/*.js","__mocks__/**/*.js"],
+      "files": ["__tests__/**/*.js", "__mocks__/**/*.js"],
       "env": {
         "jest": true
       }
